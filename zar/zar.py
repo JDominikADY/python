@@ -52,9 +52,15 @@ print("Egy " + str(len(ujkod)) + " hosszú kódszám: "+ujkod)
 
 
 
-
-
-
+#6.feladat
+def nyit(jo,proba):
+    egyezik=len(jo)==len(proba)
+    if egyezik:
+        elteres=ord(jo[0])-ord(proba[0])
+        for i in range(1,len(jo)):
+            if (elteres - (ord(jo[i]) - ord(proba[i]))) % 10 != 0:
+                egyezik=False
+    return egyezik
 
 
 
