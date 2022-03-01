@@ -1,0 +1,3 @@
+
+f=open("penztar.txt")
+
