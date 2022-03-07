@@ -39,3 +39,4 @@ print("Az első vásárló " + str(kosar.index("F"))+ " darab árucikket vásár
 
 
 
+
