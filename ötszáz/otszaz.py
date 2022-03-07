@@ -47,6 +47,11 @@ voltF=False
 szam=0
 for e in kosar:
     if e==arunev:
+        if not voltF:
+            szam=szam+1
+            voltF=True
+    if e=="F":
+        voltF=False
 
 
 
