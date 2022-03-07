@@ -1,3 +1,10 @@
+def ertek(darab):
+    if darab==1:
+        return 500
+    else:
+        return darab*400+150
+
+
 
 #1
 f=open("penztar.txt")
@@ -52,6 +59,26 @@ for e in kosar:
             voltF=True
     if e=="F":
         voltF=False
+print(str(szam) + "vásárlás során vettek belőle")
+
+
+#6
+print("6.feladat")
+print(str(vasarlasDb)) + "darab vételekor fizetendő: " + str(ertek(vasarlasDb))
+
+#7
+darabF=0
+elozoIndex=0
+keresettIndex=0
+for i in range(0:len(kosar)):
+    if kosar[i]=="F":
+        darabF+=1
+    if darabF==sorszam:
+        elozoIndex=keresettIndex
+        keresettIndex=i
+        break
+
+print(kosar[elozoIndex:keresettIndex])
 
 
 
