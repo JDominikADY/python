@@ -1,3 +1,4 @@
+
 #1
 f=open("penztar.txt")
 kosar=[]
@@ -24,6 +25,7 @@ arunev=input("Árucikk neve: ")
 darab=int(input("Darabszám: "))
 
 
+#5
 print("5. feladat")
 aruIndex=kosar.index(arunev)
 darabLista=kosar[:aruIndex]
@@ -32,10 +34,19 @@ vasarlasDb=darabLista.count("F")+ 1
 print(vasarlasDb)
 print("Az első vásárlás sorszáma" + str(vasarlasDb))
 
+utolsoIndex=0
+for i in range(0,len(kosar)):
+    if kosar[i*-1-1]==arunev:
+        utolsoIndex=len(kosar)-i
+        break
+darabLista=kosar[:utolsoIndex]
+vasarlasDb=darabLista.count("F") + 1
+print("Az utolsó vásárlás sorszáma:" +str(vasarlasDb))
 
-
-
-
+voltF=False
+szam=0
+for e in kosar:
+    if e==arunev:
 
 
 
