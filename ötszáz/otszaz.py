@@ -48,7 +48,7 @@ for i in range(0,len(kosar)):
         break
 darabLista=kosar[:utolsoIndex]
 vasarlasDb=darabLista.count("F") + 1
-print("Az utolsó vásárlás sorszáma:" +str(vasarlasDb))
+print("Az utolsó vásárlás sorszáma: " +str(vasarlasDb))
 
 voltF=False
 szam=0
@@ -59,35 +59,42 @@ for e in kosar:
             voltF=True
     if e=="F":
         voltF=False
-print(str(szam) + "vásárlás során vettek belőle")
+print(str(szam) + " vásárlás során vettek belőle")
 
 
 #6
 print("6.feladat")
-print(str(vasarlasDb)) + "darab vételekor fizetendő: " + str(ertek(vasarlasDb))
+print(str(vasarlasDb) + "darab vételekor fizetendő: " + str(ertek(vasarlasDb)))
 
 #7
+print("7.feladat")
 darabF=0
 elozoIndex=0
 keresettIndex=0
-for i in range(0:len(kosar)):
+
+for i in range(0, len(kosar)):
     if kosar[i]=="F":
         darabF+=1
-    if darabF==sorszam:
         elozoIndex=keresettIndex
         keresettIndex=i
+        
+    if darabF==sorszam:
         break
 
-print(kosar[elozoIndex:keresettIndex])
+print(kosar[elozoIndex+1:keresettIndex])
 
+if sorszam>1:
+    darabKosar=kosar[elozoIndex+1:keresettIndex]
+else:
+    darabKosar=kosar[elozoIndex:keresettIndex]
 
-
-
-
-
-
-
-
+stat={}
+for e in darabKosar:
+   if e in stat.keys():
+       stat[e]+=1
+   else:
+       stat[e]=1
+print(stat)
 
 
 
