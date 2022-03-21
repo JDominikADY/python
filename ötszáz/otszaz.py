@@ -10,7 +10,6 @@ kosar=[]
 for sor in f:
     kosar.append(sor.strip())
 
-
 f.close()
 
 #2
@@ -23,13 +22,12 @@ print("3.feladat")
 print("Az első vásárló " + str(kosar.index("F"))+ " darab árucikket vásárolt.")
 
 
-
 #4
 sorszam=int(input("Vásárlás sorszáma: "))
 arunev=input("Árucikk neve: ")
 darab=int(input("Darabszám: "))
 
-
+#5
 print("5. feladat")
 aruIndex=kosar.index(arunev)
 darabLista=kosar[:aruIndex]
@@ -53,6 +51,7 @@ print(str(szam) + " vásárlás során vettek belőle")
 #6
 print("6.feladat")
 print(str(vasarlasDb) + "darab vételekor fizetendő: " + str(ertek(vasarlasDb)))
+
 
 #7
 print("7.feladat")
@@ -87,6 +86,7 @@ for e in darabKosar:
 for e in stat:
     print(str(stat[e]) + " " + e)
 
+
 #8
 stat={}
 ossz=[]
@@ -102,3 +102,57 @@ for e in kosar:
             stat[e]+=1
         else:
             stat[e]=1
+
+#print(ossz)
+f=open("osszeg.txt","w")
+for i in range(0, len(ossz)):
+    f.write(str(i+1)+": " + str(ossz[i])+ "\n")
+
+f.close()
+
+f=open("osszeg.txt", "w")
+for i,e in enumerate(ossz):
+    f.write(str(i+1) + ": " + str(e) +"\n")
+f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
