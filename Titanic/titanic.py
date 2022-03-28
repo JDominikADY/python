@@ -1,15 +1,15 @@
-#11111
+#1
 f=open("titanic.txt")
 adatok=f.read().split("\n")
 
 f.close()
 
 
-#22222
+#22
 print("2. feladat: " + str(len(adatok)) + " db")
 
 
-#33333
+#333
 print("3. feladat: " + str(sum(int(e.split(";")[1]) + int(e.split(";")[2]) for e in adatok)) + " fő")
 
 ossz=0
@@ -22,7 +22,7 @@ for e in adatok:
 print("3. feladat: " + str(ossz) + " fő")
 
 
-#44444
+#4444
 kulcsSzo=input("4. feladat: Kulcsszó: ")
 van=False
 
@@ -61,33 +61,32 @@ for e in talalat:
 print("\n".join(["\t" + e[0] + " " + str((e[1]+e[2]))+ " fő" for e in talalat]))
 
 
-#666
-print("6.feladat")
+#666666
+print("6. feladat")
 arany=[]
 for e in adatok2:
     if e[2]/(e[1]+e[2])>0.6:
         arany.append(e[0])
+
 for e in arany:
-    print(e)
+    print("\t"+e)
     
+print("6. feladat")
+print("\r\n".join(["\t" + e[0] for e in adatok2 if e[2] / (sum(e[1:]))>0.6]))
 
 
+#7777777
+maximum=-1
+maxkat=""
+for e in adatok2:
+    if e[1]>maximum:
+        maximum=e[1]
+        maxkat=e[0]
+        
+print("7. feladat" + maxkat)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(max([e[1] for e in adatok2]))
+print("7. feladat" + [k[0] for k in adatok2 if k[1] == max([e[1] for e in adatok2])])
 
 
 
