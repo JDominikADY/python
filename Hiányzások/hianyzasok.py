@@ -1,4 +1,5 @@
 #masodikverzio
+#elsoverzio
 f=open=("naplo.txt")
 adatok=f.read().split("\n")
 
