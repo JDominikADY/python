@@ -63,6 +63,19 @@ def nyit(jo,proba):
     return egyezik
 
 
+#7.feladat
+f=open("siker.txt", "w")
+f.write(i + " ")
+for i in kodok:
+    if len(i)!=len(be):
+        f.write("Hibás hossz\n")
+    elif nyit(i,be):
+        pass
+    else:
+        pass
+f.close()
+
+
 
 
 
