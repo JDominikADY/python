@@ -46,6 +46,6 @@ while (True):
         break
     
     else:
-        print("Nincs ilyen!")
+        print("Nincs ilyen menüpont!")
 
 
