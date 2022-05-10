@@ -1,3 +1,5 @@
+JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!JEGYZET!!
+
 autós menetlevél nyilvántartó
 szöveges fájlban:
 	rendszám
@@ -10,3 +12,13 @@ szöveges fájlban:
 adatrögzítésre képes (bekér)
 adat módosítása / törlése
 statisztikák lekérdezése
+
+
+
+
+
+
+
+KAMION?
++rakomány
++pihenőhelyek/megállóhelyek
