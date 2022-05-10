@@ -1,0 +1,12 @@
+autós menetlevél nyilvántartó
+szöveges fájlban:
+	rendszám
+	sofőr
+	induló km
+	vég km
+	dátum
+	hány litert tankolt (0 ha semmit)
+
+adatrögzítésre képes (bekér)
+adat módosítása / törlése
+statisztikák lekérdezése
