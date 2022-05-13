@@ -1,3 +1,5 @@
+import beker
+
 menu_options = {
     1: "Menüpont 1",
     2: "Menüpont 2",
