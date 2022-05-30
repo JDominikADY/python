@@ -1,4 +1,5 @@
 import smsmodul
+import math
 
 f=open("sms.txt")
 sorok=f.read().split("\n")[1:-1]
@@ -17,7 +18,7 @@ print("{}".format(smsek[-1].uzenet))
 
 
 
-print("3.FELADAT)
+print("3.FELADAT")
 minIndex=0
 maxIndex=0
 
@@ -29,3 +30,64 @@ for i in range(0,len(smsek)):
 
 print("óra:() perc:{} telefonszám:{} üzenet:{}".format(smsek[maxIndex].ora,smsek[maxIndex].perc,smsek[maxIndex].telefonszam,smsek[maxIndex].uzenet,))
 print("óra:() perc:{} telefonszám:{} üzenet:{}".format(smsek[minIndex].ora,smsek[minIndex].perc,smsek[minIndex].telefonszam,smsek[minIndex].uzenet,))
+
+
+
+stat=[0,0,0,0,0]
+
+for a in smsek:
+    stat[math.ceil(len(a.uzenet)/20)-1]+=1
+print(stat)
+print("4.feladat")
+print("1-20:{} db, 21-40:{} db, 41-60:{} db, 61-80:{} db, 81-100:{} db.".format(stat[0],stat[1],stat[2],stat[3],stat[4]))
+
+
+stat=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+stat=[]
+for i in range(0,24):
+    stat.append(0)
+
+for a in smsek:
+    stat[a.ora]+=1
+
+
+ossz=0
+for a in stat:
+    if a>10:
+        ossz+=a-10
+print("5.feladat")
+print("Ernőnek {} SMS-t kell fizetnie.".format(ossz))
+
+
+elozo=-1
+idotav=[]
+for a in smsek:
+    if a.telefonszam="123456789":
+        if elozo!=-1:
+            idotav.append(a.idoperc()-elozo)
+                elozo=a.idoperc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
