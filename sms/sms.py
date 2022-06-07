@@ -62,7 +62,7 @@ print("Ernőnek {} SMS-t kell fizetnie.".format(ossz))
 elozo=-1
 idotav=[]
 for a in smsek:
-    if a.telefonszam="123456789":
+    if a.telefonszam=="123456789":
         if elozo!=-1:
             idotav.append(a.idoperc()-elozo)
                 elozo=a.idoperc()
